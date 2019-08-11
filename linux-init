@@ -37,6 +37,13 @@ then
 #robomongo
 	sudo apt-get update
 	sudo snap install robomongo
+#zsh
+	sudo apt-get update
+	sudo apt-get install zsh -y
+	sudo usermod -s /usr/bin/zsh $(whoami)
+	echo "-------------------------------------------------------"
+	echo "Reboot PC, and select option (2) upon start of terminal to configure zsh"
+	echo "-------------------------------------------------------"
 
 else
 	echo "Installation aborted."
