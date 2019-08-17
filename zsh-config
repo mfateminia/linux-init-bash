@@ -7,8 +7,14 @@
   sudo apt-get install zsh-syntax-highlighting
   echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
-# add git aliases to zsh
+# modifications
 cat >> ~/.zshrc << EOL
+  #remove excess stuff from zshbash
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+  POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+  POWERLEVEL9K_DISABLE_RPROMPT=true
+  
+  #git aliases
   gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
   gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
   alias fj="cd ~/repos/sales-ext"
