@@ -19,6 +19,9 @@ cat >> ~/.zshrc << EOL
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
   
+  #docker aliases
+  alias start-redis="docker container exec -it redis /bin/bash"
+  
   #git aliases
   gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
   gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
