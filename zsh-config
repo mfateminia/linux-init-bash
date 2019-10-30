@@ -18,15 +18,10 @@ cat >> ~/.zshrc << EOL
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-  
-  #docker aliases
-  alias start-redis="docker container exec -it redis /bin/bash"
-  
+    
   #git aliases
   gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
   gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
-  alias fj="cd ~/repos/sales-ext"
-  alias gc="git checkout"
   alias gcb="git checkout -b"
   alias gb="git branch"
   alias gr="git fetch origin && git rebase origin/develop"
@@ -37,4 +32,12 @@ cat >> ~/.zshrc << EOL
   git commit -m $commit_message
   gp
   }
+  
+  #vpn aliases
+  alias vpnup="wg-quick up wg0"
+  alias vpndown="wg-quick down wg0"
+  
+  #other aliases
+  alias start="cd ~/repos/platforms && docker-compose up -d && vpnup && code ./ && npm run dev"  alias gc="git checkout"
+  alias start-redis="docker container exec -it redis /bin/bash"
 EOL
