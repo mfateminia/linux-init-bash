@@ -19,25 +19,37 @@ cat >> ~/.zshrc << EOL
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
     
-  #git aliases
-  gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
-  gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
-  alias gcb="git checkout -b"
-  alias gb="git branch"
-  alias gr="git fetch origin && git rebase origin/develop"
-  alias gcp="git cherry-pick"
-  gac () {
-  git add .
-  read commit_message
-  git commit -m $commit_message
-  gp
-  }
-  
-  #vpn aliases
-  alias vpnup="wg-quick up wg0"
-  alias vpndown="wg-quick down wg0"
-  
-  #other aliases
-  alias start="cd ~/repos/platforms && docker-compose up -d && vpnup && code ./ && npm run dev"  alias gc="git checkout"
-  alias start-redis="docker container exec -it redis /bin/bash"
+#docker aliases
+alias start-redis="docker container exec -it redis /bin/bash"
+
+#My custom aliases
+gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
+gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
+alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gb="git branch"
+alias gr="git fetch origin && git rebase origin/develop"
+alias gcp="git cherry-pick"
+gac () {
+git add .
+read commit_message
+git commit -m $commit_message
+gp
+}
+
+
+alias vpnup="wg-quick up wg0"
+alias vpndown="wg-quick down wg0"
+alias localhost="google-chrome "http://localhost:3000" </dev/null &>/dev/null &"
+
+alias stop="cd ~/repos/platforms && docker-compose down && vpndown"
+
+start() {
+if [ $1 = '-l' ]
+then
+cd ~/repos/platforms && docker-compose up -d && vpnup && code ./ && npm run dev
+else
+cd ~/repos/platforms && vpnup && code ./ && npm run dev:cloud
+fi
+}
 EOL
