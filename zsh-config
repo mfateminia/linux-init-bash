@@ -48,7 +48,8 @@ start() {
 if [ $1 = '-l' ]
 then
 cd ~/repos/platforms && docker-compose up -d && vpnup && code ./ && npm run dev
-else
+elif [ $1 = '-c' ]
+then
 cd ~/repos/platforms && vpnup && code ./ && npm run dev:cloud
 fi
 }
