@@ -30,7 +30,7 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
 alias gcp="git cherry-pick"
-gac ($1) {
+gac () {
 git add .
 git commit -m $1
 gp
