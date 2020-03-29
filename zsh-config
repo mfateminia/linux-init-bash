@@ -30,10 +30,9 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
 alias gcp="git cherry-pick"
-gac () {
+gac ($1) {
 git add .
-read commit_message
-git commit -m $commit_message
+git commit -m $1
 gp
 }
 
