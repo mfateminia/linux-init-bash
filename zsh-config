@@ -25,10 +25,10 @@ alias start-redis="docker container exec -it redis /bin/bash"
 #My custom aliases
 gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
 gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
+gr () {git fetch origin && git rebase origin/$1}
 alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
-alias gr="git fetch origin && git rebase origin/develop"
 alias gcp="git cherry-pick"
 gac () {
 git add .
