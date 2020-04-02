@@ -44,12 +44,12 @@ alias localhost="google-chrome "http://localhost:3000" </dev/null &>/dev/null &"
 alias stop="cd ~/repos/platforms && docker-compose down && vpndown"
 
 start() {
-if [ $1 = '-l' ]
+if [ $1 = 'ocean' ]
 then
-cd ~/repos/platforms && docker-compose up -d && vpnup && code ./ && npm run dev
-elif [ $1 = '-c' ]
+cd ~/repos/platforms && docker-compose up -d code ./
+elif [ $1 = 'komak' ]
 then
-cd ~/repos/platforms && vpnup && code ./ && gnome-terminal --tab -- npm run frontend && gnome-terminal --tab -- npm run backend:cloud
+cd ~/repos/backend && docker-compose up -d code ./
 fi
 }
 EOL
