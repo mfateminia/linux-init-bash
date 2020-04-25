@@ -41,7 +41,15 @@ alias vpnup="wg-quick up wg0"
 alias vpndown="wg-quick down wg0"
 alias localhost="google-chrome "http://localhost:3000" </dev/null &>/dev/null &"
 
-alias stop="cd ~/repos/platforms && docker-compose down && vpndown"
+stop() {
+if [ $1 = 'ocean' ]
+then
+cd ~/repos/ocean/platforms && docker-compose down
+elif [ $1 = 'komak' ]
+then
+cd ~/repos/komak/backend && docker-compose down
+fi
+}
 
 start() {
 if [ $1 = 'ocean' ]
