@@ -1,8 +1,7 @@
 #!/bin/bash
-echo "To install all new packages type yes:"
+echo "Press any key to continue"
 read user_answer_to_confirm
-if [[ "$user_answer_to_confirm" == "yes" ]]
-then
+
 # tools
 	sudo apt-get update
 	sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common snapd build-essential libssl-dev
@@ -37,6 +36,8 @@ then
 #robomongo
 	sudo apt-get update
 	sudo snap install robomongo
+#wireguard
+	sudo apt install wireguard
 #zsh
 	sudo apt-get update
 	sudo apt-get install zsh -y
@@ -44,7 +45,3 @@ then
 	echo "-------------------------------------------------------"
 	echo "Reboot PC, and select option (2) upon start of terminal to configure zsh"
 	echo "-------------------------------------------------------"
-
-else
-	echo "Installation aborted."
-fi
