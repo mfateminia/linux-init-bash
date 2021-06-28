@@ -6,21 +6,21 @@ read user_answer_to_confirm
 	sudo apt-get update
 	sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common snapd build-essential libssl-dev
 #slack
-	sudo snap install slack --classic
+# 	sudo snap install slack --classic
 #git
 	sudo apt-get update
 	sudo apt install git -y
 #nvm: check the version from https://github.com/creationix/nvm/releases
 	sudo apt-get update
-	sudo curl https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+	sudo curl https://raw.githubusercontent.com/creationix/nvm/v0.38.0/install.sh | bash
 	source ~/.profile
 #docker & docker-compose
-	sudo apt-get update
-	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(. /etc/os-release; echo "$UBUNTU_CODENAME") stable"
-	sudo apt-get update
-	sudo apt-get -y  install docker-ce docker-compose
-	sudo usermod -aG docker $USER
+# 	sudo apt-get update
+# 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# 	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(. /etc/os-release; echo "$UBUNTU_CODENAME") stable"
+# 	sudo apt-get update
+# 	sudo apt-get -y  install docker-ce docker-compose
+# 	sudo usermod -aG docker $USER
 #vs code
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 	sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -34,10 +34,10 @@ read user_answer_to_confirm
 	sudo apt-get update 
 	sudo apt-get install google-chrome-stable
 #robomongo
-	sudo apt-get update
-	sudo snap install robomongo
+# 	sudo apt-get update
+# 	sudo snap install robomongo
 #wireguard
-	sudo apt install wireguard
+# 	sudo apt install wireguard
 #zsh
 	sudo apt-get update
 	sudo apt-get install zsh -y
