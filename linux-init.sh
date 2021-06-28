@@ -12,8 +12,9 @@ read user_answer_to_confirm
 	sudo apt install git -y
 #nvm: check the version from https://github.com/creationix/nvm/releases
 	sudo apt-get update
-	sudo curl https://raw.githubusercontent.com/creationix/nvm/v0.38.0/install.sh | bash
+	curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 	source ~/.profile
+	nvm install 12
 #docker & docker-compose
 # 	sudo apt-get update
 # 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -44,11 +45,9 @@ read user_answer_to_confirm
   	sudo apt-get install -y apt-transport-https
   	sudo apt-get update
   	sudo apt-get install -y aspnetcore-runtime-5.0
-#robomongo
-# 	sudo apt-get update
-# 	sudo snap install robomongo
-#wireguard
-# 	sudo apt install wireguard
+#NuGet authorization package
+	wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
+
 #zsh
 	sudo apt-get update
 	sudo apt-get install zsh -y
