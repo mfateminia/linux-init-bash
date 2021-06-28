@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # zsh font and theme
-  sudo apt-get install powerline fonts-powerline
-  sudo apt-get install zsh-theme-powerlevel9k
+  sudo apt-get install powerline fonts-powerline -y
+  sudo apt-get install zsh-theme-powerlevel9k -y
   echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
-  sudo apt-get install zsh-syntax-highlighting
+  sudo apt-get install zsh-syntax-highlighting -y
   echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 
 # modifications
