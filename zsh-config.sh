@@ -16,48 +16,5 @@ cat >> ~/.zshrc << EOL
   
   # NVM 
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-    
-#docker aliases
-alias start-redis="docker container exec -it redis /bin/bash"
-
-#My custom aliases
-gs () {git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))}
-gp () {git push origin $(git branch | grep \* | cut -d ' ' -f2)}
-gr () {git fetch origin && git rebase origin/$1}
-alias gc="git checkout"
-alias gcb="git checkout -b"
-alias gb="git branch"
-alias gcp="git cherry-pick"
-gac () {
-git add .
-git commit -m $1
-gp
-}
-
-
-alias vpnup="wg-quick up wg0"
-alias vpndown="wg-quick down wg0"
-alias localhost="google-chrome "http://localhost:3000" </dev/null &>/dev/null &"
-
-stop() {
-if [ $1 = 'ocean' ]
-then
-cd ~/repos/ocean/platforms && docker-compose down
-elif [ $1 = 'komak' ]
-then
-cd ~/repos/komak/backend && docker-compose down
-fi
-}
-
-start() {
-if [ $1 = 'ocean' ]
-then
-cd ~/repos/platforms && docker-compose up -d code ./
-elif [ $1 = 'komak' ]
-then
-cd ~/repos/backend && docker-compose up -d code ./
-fi
-}
-EOL
+  [ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh" # This loads nvm
+  [ -s "$HOME/.nvm/bash_completion" ] && \. "$HOME/.nvm/bash_completion"  # This loads nvm bash_completion
