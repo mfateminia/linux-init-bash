@@ -18,3 +18,4 @@ cat >> ~/.zshrc << EOL
   export NVM_DIR="$HOME/.nvm"
   [ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh" # This loads nvm
   [ -s "$HOME/.nvm/bash_completion" ] && \. "$HOME/.nvm/bash_completion"  # This loads nvm bash_completion
+EOL
