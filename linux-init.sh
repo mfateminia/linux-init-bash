@@ -33,6 +33,17 @@ read user_answer_to_confirm
 	echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 	sudo apt-get update 
 	sudo apt-get install google-chrome-stable
+#.Net core
+	wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+	sudo dpkg -i packages-microsoft-prod.deb
+	sudo apt-get update
+  	sudo apt-get install -y apt-transport-https
+  	sudo apt-get update
+  	sudo apt-get install -y dotnet-sdk-5.0
+	sudo apt-get update
+  	sudo apt-get install -y apt-transport-https
+  	sudo apt-get update
+  	sudo apt-get install -y aspnetcore-runtime-5.0
 #robomongo
 # 	sudo apt-get update
 # 	sudo snap install robomongo
