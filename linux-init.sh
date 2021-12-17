@@ -10,7 +10,7 @@ read user_answer_to_confirm
 #git
 	sudo apt-get update
 	sudo apt install git -y
-#nvm: check the version from https://github.com/creationix/nvm/releases
+#nvm:
 	sudo apt-get update
 	curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 	source ~/.profile
