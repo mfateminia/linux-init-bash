@@ -33,7 +33,7 @@ finilize () {
     #content to be appended to .bashrc
     #any new content that needs to be appended to .bashrc should be added to .bashrc in this folder
     header 'Finalizing installations'
-    cat .bashrc >> ~/.bashrc
+    curl https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/.bashrc >> ~/.bashrc
 }
 
 start
