@@ -40,11 +40,11 @@ read user_answer_to_confirm
 	sudo apt-get update
   	sudo apt-get install -y apt-transport-https
   	sudo apt-get update
-  	sudo apt-get install -y dotnet-sdk-5.0
+  	sudo apt-get install -y dotnet-sdk-6.0
 	sudo apt-get update
   	sudo apt-get install -y apt-transport-https
   	sudo apt-get update
-  	sudo apt-get install -y aspnetcore-runtime-5.0
+  	sudo apt-get install -y aspnetcore-runtime-6.0
 #NuGet authorization package
 	wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
 
