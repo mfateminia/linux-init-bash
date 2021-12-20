@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./functions.sh
+source <(curl -s https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/functions.sh)
 
 faillock --reset
 
