@@ -7,6 +7,9 @@ POWERLINE_BASH_SELECT=1
 #nvm
 source /usr/share/nvm/init-nvm.sh
 
+#zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 #aliases
 alias gc="git checkout"
 alias gcb="git checkout -b"
