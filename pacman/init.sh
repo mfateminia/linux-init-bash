@@ -1,5 +1,5 @@
 #!/bin/bash
-source <(curl -s https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/functions.sh)
+source ./functions.sh
 
 faillock --reset
 
@@ -17,6 +17,7 @@ pacman-install 'gnome-keyring'
 aur-install 'nvm'
 aur-install 'google-chrome'
 aur-install 'storageexplorer'
+aur-install 'postman-bin'
 
 #content to be appended to .bashrc
 #any new content that needs to be appended to .bashrc should be added to .bashrc in this folder
