@@ -21,7 +21,7 @@ aur-install 'postman-bin'
 
 zsh-install-and-configure
 
-shell-resource-populate
+shell-resource-add
 
 #NuGet authorization package
 wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
