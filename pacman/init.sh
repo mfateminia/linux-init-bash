@@ -8,9 +8,10 @@ pacman 'code'
 pacman 'powerline'
 pacman 'powerline-fonts'
 pacman 'dotnet-sdk'
-pacman 'gnome-keyring'
+pacman 'dotnet-sdk-3.1'
 pacman 'aspnet-runtime'
 pacman 'aspnet-runtime-3.1'
+pacman 'gnome-keyring'
 
 #add new packages from aur below:
 aur 'nvm'
