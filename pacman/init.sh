@@ -19,10 +19,9 @@ aur-install 'google-chrome'
 aur-install 'storageexplorer'
 aur-install 'postman-bin'
 
-#content to be appended to .bashrc
-#any new content that needs to be appended to .bashrc should be added to .bashrc in this folder
-curl https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/.bashrc >> ~/.bashrc
-curl https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/functions.sh >> ~/.bashrc
+zsh-install-and-configure
+
+shell-resource-populate
 
 #NuGet authorization package
 wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
