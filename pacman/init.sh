@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./functions.sh
+source <(curl -s https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/functions.sh)
 
 faillock --reset
 
@@ -19,7 +19,7 @@ aur-install 'google-chrome'
 aur-install 'storageexplorer'
 aur-install 'postman-bin'
 
-zsh-install-and-configure
+zsh-install
 
 shell-resource-add
 
