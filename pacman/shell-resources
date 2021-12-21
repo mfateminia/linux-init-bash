@@ -17,16 +17,16 @@ alias gcb="git checkout -b"
 alias gb="git branch"
 alias gcp="git cherry-pick"
 
-gs() {
+function gs {
     git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))
 }
-gp() {
+function gp {
     git push origin $(git branch | grep \* | cut -d ' ' -f2)
 }
-gr() {
+function gr {
     git fetch origin && git rebase origin/$1
 }
-gac () {
+function gac {
     git add .
     git commit -m $1
     gp
