@@ -1,3 +1,4 @@
+
 #powerline
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
@@ -6,6 +7,9 @@ POWERLINE_BASH_SELECT=1
 
 #nvm
 source /usr/share/nvm/init-nvm.sh
+
+#zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #aliases
 alias gc="git checkout"
