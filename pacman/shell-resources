@@ -20,8 +20,11 @@ alias gcp="git cherry-pick"
 function gs {
     git rebase -i $(git merge-base origin/develop $(git branch | grep \* | cut -d ' ' -f2))
 }
-function gp {
+function gps {
     git push origin $(git branch | grep \* | cut -d ' ' -f2)
+}
+function gpl {
+    git pull origin $(git branch | grep \* | cut -d ' ' -f2)
 }
 function gr {
     git fetch origin && git rebase origin/$1
