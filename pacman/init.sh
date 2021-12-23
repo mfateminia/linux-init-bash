@@ -12,6 +12,7 @@ pacman-install 'dotnet-sdk-3.1'
 pacman-install 'aspnet-runtime'
 pacman-install 'aspnet-runtime-3.1'
 pacman-install 'gnome-keyring'
+pacman-install 'zsh'
 
 #add new packages from aur below:
 aur-install 'nvm'
