@@ -19,6 +19,7 @@ aur-install 'nvm'
 aur-install 'google-chrome'
 aur-install 'storageexplorer'
 aur-install 'postman-bin'
+aur-install 'rider'
 
 zsh-install
 
