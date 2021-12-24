@@ -23,7 +23,7 @@ aur-install 'rider'
 
 zsh-install
 
-shell-resource-add
+shell-resources-add
 
 #NuGet authorization package
 wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
