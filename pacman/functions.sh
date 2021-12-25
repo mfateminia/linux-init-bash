@@ -39,3 +39,12 @@ function shell-resources-add {
     curl https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/shell-resources >> ~/.zshrc
     curl https://raw.githubusercontent.com/mfateminia/linux-scripts/master/pacman/functions.sh >> ~/.zshrc
 }
+
+function github-ssh-add {
+    email=$1
+    pacman-install 'github-cli'
+    ssh-keygen -t ed25519 -C $email
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    gh auth login
+}
