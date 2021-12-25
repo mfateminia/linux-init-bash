@@ -13,6 +13,7 @@ pacman-install 'aspnet-runtime'
 pacman-install 'aspnet-runtime-3.1'
 pacman-install 'gnome-keyring'
 pacman-install 'zsh'
+pacman-install 'github-cli'
 
 #add new packages from aur below:
 aur-install 'nvm'
@@ -24,6 +25,8 @@ aur-install 'rider'
 zsh-install
 
 shell-resources-add
+
+github-ssh-add
 
 #NuGet authorization package
 wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
