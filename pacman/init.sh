@@ -3,6 +3,9 @@ source <(curl -s https://raw.githubusercontent.com/mfateminia/linux-scripts/mast
 
 faillock --reset
 
+echo "Enter the user github email:"  
+read github_email
+
 #add new packages from pacman below:
 pacman-install 'code'
 pacman-install 'powerline'
@@ -26,7 +29,7 @@ zsh-install
 
 shell-resources-add
 
-github-ssh-add
+github-ssh-add $github_email
 
 #NuGet authorization package
 wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
