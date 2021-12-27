@@ -48,3 +48,7 @@ function github-ssh-add {
     ssh-add ~/.ssh/id_ed25519
     gh auth login
 }
+
+function finilize {
+    cd ~ && mkdir repos
+}
