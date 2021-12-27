@@ -29,6 +29,8 @@ zsh-install
 
 shell-resources-add
 
+finilize
+
 github-ssh-add $github_email
 
 #NuGet authorization package
