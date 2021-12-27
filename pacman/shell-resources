@@ -36,6 +36,7 @@ function gac {
 }
 
 #work aliases
+alias repos='cd ~/repos'
 alias fe='cd ~/repos/golf-portal/src/TrackManRangeWebSite/clientapp/'
 alias fes='fe && npm start'
 alias fef='fe && npm ci && npm start'
