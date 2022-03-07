@@ -14,7 +14,7 @@ read user_answer_to_confirm
 	sudo apt-get update
 	curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 	source ~/.profile
-	nvm install 12
+	nvm install 16
 #docker & docker-compose
 # 	sudo apt-get update
 # 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
