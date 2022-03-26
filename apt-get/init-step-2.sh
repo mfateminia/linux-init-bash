@@ -11,3 +11,9 @@ cat >> ~/.zshrc << EOL
   [ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh" # This loads nvm
   [ -s "$HOME/.nvm/bash_completion" ] && \. "$HOME/.nvm/bash_completion"  # This loads nvm bash_completion
 EOL
+
+#authenticate into github
+    ssh-keygen -t ed25519 -C mfateminia@gmail.com
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    gh auth login

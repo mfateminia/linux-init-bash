@@ -34,19 +34,25 @@ read user_answer_to_confirm
 	echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 	sudo apt-get update 
 	sudo apt-get install google-chrome-stable
-#.Net core
-	wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-	sudo dpkg -i packages-microsoft-prod.deb
-	sudo apt-get update
-  	sudo apt-get install -y apt-transport-https
-  	sudo apt-get update
-  	sudo apt-get install -y dotnet-sdk-6.0
-	sudo apt-get update
-  	sudo apt-get install -y apt-transport-https
-  	sudo apt-get update
-  	sudo apt-get install -y aspnetcore-runtime-6.0
-#NuGet authorization package
-	wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
+# #.Net core
+# 	wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+# 	sudo dpkg -i packages-microsoft-prod.deb
+# 	sudo apt-get update
+#   	sudo apt-get install -y apt-transport-https
+#   	sudo apt-get update
+#   	sudo apt-get install -y dotnet-sdk-6.0
+# 	sudo apt-get update
+#   	sudo apt-get install -y apt-transport-https
+#   	sudo apt-get update
+#   	sudo apt-get install -y aspnetcore-runtime-6.0
+# #NuGet authorization package
+# 	wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
+
+#github cli
+	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+	sudo apt update
+	sudo apt install gh
 
 #zsh
 	sudo apt-get update
