@@ -3,7 +3,10 @@
 # zsh font and theme
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   cd ~
-  
+ 
+#zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
 # modifications
 cat >> ~/.zshrc << EOL
   # NVM 
