@@ -57,7 +57,7 @@ read user_answer_to_confirm
 #python
 	sudo apt update
 	sudo apt install python3-pip
-	pip install pipenv
+	sudo pip install pipenv
 
 #zsh
 	sudo apt-get update
